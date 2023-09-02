@@ -413,6 +413,14 @@ for i in range(len(severity_list)):
         - `attacker`: 负责执行攻击的对象。
     - 函数首先将模型和白盒模型设置为评估模式。
     - 如果攻击者有一个加载器并处于训练模式，则会训练一个通用的攻击补丁。
+        故，需要分析几类Attacker。
+        由于仅有Patch_attack需要train，故该过程仅体现它。
+
+        [**Base_attack**](read_note/base_attack.md)
+        [**PGD**](read_note/PGD.md)
+
+        [**Patch**](read_note/Patch.md)
+
     - 随后，函数通过`data_loader`迭代测试数据，使用`attacker`生成攻击输入，然后在原始模型上进行预测。
     - 函数返回预测结果列表。
 
