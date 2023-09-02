@@ -417,10 +417,13 @@ for i in range(len(severity_list)):
         由于仅有Patch_attack需要train，故该过程仅体现它。
 
         [**Base_attack**](read_note/base_attack.md)
+
         [**PGD**](read_note/PGD.md)
 
         [**Patch**](read_note/Patch.md)
 
+        [**Univer_Patch**](read_note/Univer_Patch.md)
+        
     - 随后，函数通过`data_loader`迭代测试数据，使用`attacker`生成攻击输入，然后在原始模型上进行预测。
     - 函数返回预测结果列表。
 
